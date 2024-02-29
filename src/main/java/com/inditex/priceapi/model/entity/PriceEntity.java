@@ -9,23 +9,23 @@ import lombok.Data;
 @Data
 @Table(name = "price")
 @Entity
-public class Price {
+public class PriceEntity {
 
     @Column(name = "brand_id")
-    private Integer brand_id;
+    private Integer brandId;
 
     @Column(name = "start_date")
-    private String start_date;
+    private String startDate;
 
     @Column(name = "end_date")
-    private String end_date;
+    private String endDate;
 
     @Id
     @Column(name = "price_list")
-    private String price_list;
+    private String priceList;
 
     @Column(name = "product_id")
-    private String product_id;
+    private String productId;
 
     @Column(name = "priority")
     private String priority;

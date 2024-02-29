@@ -1,7 +1,9 @@
 package com.inditex.priceapi.controller;
 
 
-import com.inditex.priceapi.model.entity.Price;
+import com.inditex.priceapi.mapper.PriceMapper;
+import com.inditex.priceapi.model.dto.PriceDto;
+import com.inditex.priceapi.model.entity.PriceEntity;
 import com.inditex.priceapi.service.PriceService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +18,7 @@ public class Controller {
     PriceService priceService;
 
     @GetMapping("/price")
-    private List<Price> getAllPrices(){
+    private List<PriceDto> getAllPrices(){
         return priceService.getAllPrices();
     }
 }
