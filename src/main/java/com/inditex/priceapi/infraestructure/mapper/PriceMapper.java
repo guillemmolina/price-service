@@ -1,8 +1,7 @@
-package com.inditex.priceapi.mapper;
+package com.inditex.priceapi.infraestructure.mapper;
 
-
-import com.inditex.priceapi.model.dto.PriceDto;
 import com.inditex.priceapi.model.entity.PriceEntity;
+import com.inditex.priceapi.model.model.Price;
 import org.mapstruct.*;
 
 @Mapper(collectionMappingStrategy = CollectionMappingStrategy.ADDER_PREFERRED,
@@ -11,5 +10,5 @@ import org.mapstruct.*;
         injectionStrategy = InjectionStrategy.CONSTRUCTOR,
         componentModel = "spring")
 public interface PriceMapper {
-    PriceDto priceToDTO(PriceEntity priceEntity);
+    Price priceToDTO(PriceEntity priceEntity);
 }

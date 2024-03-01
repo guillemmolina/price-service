@@ -1,8 +1,9 @@
 package com.inditex.priceapi.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Column;
 import lombok.Data;
+
+import java.time.LocalDateTime;
 
 @Data
 public class PriceDto {
@@ -17,8 +18,8 @@ public class PriceDto {
     private String priceList;
 
     @JsonProperty("start_date")
-    private String startDate;
+    private LocalDateTime startDate;
 
     @JsonProperty("end_date")
-    private String endDate;
+    private LocalDateTime endDate;
 }

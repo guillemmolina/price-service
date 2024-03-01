@@ -6,6 +6,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 @Table(name = "price")
 @Entity
@@ -15,20 +17,20 @@ public class PriceEntity {
     private Integer brandId;
 
     @Column(name = "start_date")
-    private String startDate;
+    private LocalDateTime startDate;
 
     @Column(name = "end_date")
-    private String endDate;
+    private LocalDateTime endDate;
 
     @Id
     @Column(name = "price_list")
     private String priceList;
 
     @Column(name = "product_id")
-    private String productId;
+    private Integer productId;
 
     @Column(name = "priority")
-    private String priority;
+    private Integer priority;
 
     @Column(name = "price")
     private String price;
