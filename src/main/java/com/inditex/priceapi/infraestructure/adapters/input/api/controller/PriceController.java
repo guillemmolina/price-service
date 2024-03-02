@@ -21,7 +21,7 @@ public class PriceController {
     PriceMapper mapper;
 
     @GetMapping("/price")
-    private ResponseEntity<PriceDto> getAllPrices(
+    public ResponseEntity<PriceDto> getAllPrices(
             @RequestParam(name = "application_date") LocalDateTime applicationDate,
             @RequestParam(name = "product_id") Integer productId,
             @RequestParam(name = "brand_id") Integer brandId
