@@ -27,9 +27,6 @@ public class PriceController {
             @RequestParam(name = "brand_id") Integer brandId
     ){
         Optional<Price> price = priceService.getAllPrices(applicationDate, productId, brandId);
-        if(price.isEmpty()){
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }
-        return new ResponseEntity<>(mapper.priceToDTO(price.get()), HttpStatus.OK);
+        return price.map(value -> new ResponseEntity<>(mapper.priceToDTO(value), HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NO_CONTENT));
     }
 }
