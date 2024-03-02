@@ -1,4 +1,4 @@
-package com.inditex.priceapi.model.model;
+package com.inditex.priceapi.domain.model;
 
 import lombok.Data;
 

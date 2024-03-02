@@ -1,6 +1,6 @@
-package com.inditex.priceapi.repository;
+package com.inditex.priceapi.domain.db.repository;
 
-import com.inditex.priceapi.model.entity.PriceEntity;
+import com.inditex.priceapi.domain.db.entity.PriceEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;

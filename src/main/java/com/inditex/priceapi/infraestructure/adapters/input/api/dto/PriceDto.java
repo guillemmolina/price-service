@@ -1,4 +1,4 @@
-package com.inditex.priceapi.model.dto;
+package com.inditex.priceapi.infraestructure.adapters.input.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
