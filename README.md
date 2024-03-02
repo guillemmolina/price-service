@@ -22,7 +22,7 @@ Para realizar una consulta, se deben proporcionar los siguientes parámetros med
 
 - Capa de Dominio: Contiene las reglas de negocio y lógica de la aplicación.
 - Capa de Aplicación: Actúa como una capa intermedia entre la capa de dominio y las capas externas. Se encarga de orquestar las operaciones y manejar los casos de uso.
-- Capa de Infraestructura: Contiene la implementación de los adaptadores de entrada y salida, así como las dependencias externas como bases de datos y servicios externos.
+- Capa de Infraestructura: Contiene la implementación de los adaptadores de entrada y salida.
 
 # Pruebas
 
