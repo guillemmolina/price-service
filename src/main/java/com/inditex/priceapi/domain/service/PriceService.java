@@ -4,7 +4,7 @@ import com.inditex.priceapi.domain.ports.PricePortInput;
 import com.inditex.priceapi.infraestructure.adapters.input.api.mapper.PriceMapper;
 import com.inditex.priceapi.domain.db.entity.PriceEntity;
 import com.inditex.priceapi.domain.model.Price;
-import com.inditex.priceapi.domain.db.repository.PriceRepository;
+import com.inditex.priceapi.infraestructure.adapters.output.repository.PriceRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
