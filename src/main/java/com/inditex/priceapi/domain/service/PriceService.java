@@ -8,8 +8,6 @@ import com.inditex.priceapi.infraestructure.adapters.output.repository.PriceRepo
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
-import java.util.Comparator;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,14 +19,11 @@ public class PriceService implements PricePortInput {
 
     @Override
     public Optional<Price> getAllPrices(LocalDateTime applicationDate, Integer productId, Integer brandId) {
-        List<PriceEntity> result = repository.findByBrandIdAndProductId(brandId, productId);
+        PriceEntity result = repository.findPrice(brandId, productId, applicationDate);
 
-        List<PriceEntity> filtered = result.stream()
-                .filter(price -> price.getStartDate().isBefore(applicationDate) && price.getEndDate().isAfter(applicationDate)).toList();
-
-        Optional<PriceEntity> optionalResult = filtered.stream()
-                .max(Comparator.comparingInt(PriceEntity::getPriority));
-
-        return optionalResult.map(priceMapper::priceToMODEL);
+        if(result != null){
+            return Optional.of(priceMapper.priceToMODEL(result));
+        }
+        return Optional.empty();
     }
 }

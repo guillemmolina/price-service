@@ -24,7 +24,7 @@ public class PriceEntity {
 
     @Id
     @Column(name = "price_list")
-    private String priceList;
+    private Integer priceList;
 
     @Column(name = "product_id")
     private Integer productId;

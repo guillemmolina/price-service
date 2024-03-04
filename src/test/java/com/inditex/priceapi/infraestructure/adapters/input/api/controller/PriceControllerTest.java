@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -30,12 +29,13 @@ class PriceControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(
-                        "{" +
-                                "\"product_id\": \"35455\"," +
-                                "\"brand_id\": 1," +
-                                "\"price_list\": \"1\"," +
-                                "\"start_date\": \"2020-06-14T00:00:00\"," +
-                                "\"end_date\": \"2020-12-31T23:59:59\"" +
+                        "{\n" +
+                                "    \"price\": \"35.50\",\n" +
+                                "    \"product_id\": 35455,\n" +
+                                "    \"brand_id\": 1,\n" +
+                                "    \"price_list\": 1,\n" +
+                                "    \"start_date\": \"2020-06-14T00:00:00\",\n" +
+                                "    \"end_date\": \"2020-12-31T23:59:59\"\n" +
                                 "}"
                 ));
     }
@@ -50,12 +50,13 @@ class PriceControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(
-                        "{" +
-                                "\"product_id\": \"35455\"," +
-                                "\"brand_id\": 1," +
-                                "\"price_list\": \"2\"," +
-                                "\"start_date\": \"2020-06-14T15:00:00\"," +
-                                "\"end_date\": \"2020-06-14T18:30:00\"" +
+                        "{\n" +
+                                "    \"price\": \"25.45\",\n" +
+                                "    \"product_id\": 35455,\n" +
+                                "    \"brand_id\": 1,\n" +
+                                "    \"price_list\": 2,\n" +
+                                "    \"start_date\": \"2020-06-14T15:00:00\",\n" +
+                                "    \"end_date\": \"2020-06-14T18:30:00\"\n" +
                                 "}"
                 ));
     }
@@ -70,12 +71,13 @@ class PriceControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(
-                        "{" +
-                                "\"product_id\": \"35455\"," +
-                                "\"brand_id\": 1," +
-                                "\"price_list\": \"1\"," +
-                                "\"start_date\": \"2020-06-14T00:00:00\"," +
-                                "\"end_date\": \"2020-12-31T23:59:59\"" +
+                        "{\n" +
+                                "    \"price\": \"35.50\",\n" +
+                                "    \"product_id\": 35455,\n" +
+                                "    \"brand_id\": 1,\n" +
+                                "    \"price_list\": 1,\n" +
+                                "    \"start_date\": \"2020-06-14T00:00:00\",\n" +
+                                "    \"end_date\": \"2020-12-31T23:59:59\"\n" +
                                 "}"
                 ));
     }
@@ -90,12 +92,13 @@ class PriceControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(
-                        "{" +
-                                "\"product_id\": \"35455\"," +
-                                "\"brand_id\": 1," +
-                                "\"price_list\": \"3\"," +
-                                "\"start_date\": \"2020-06-15T00:00:00\"," +
-                                "\"end_date\": \"2020-06-15T11:00:00\"" +
+                        "{\n" +
+                                "    \"price\": \"30.50\",\n" +
+                                "    \"product_id\": 35455,\n" +
+                                "    \"brand_id\": 1,\n" +
+                                "    \"price_list\": 3,\n" +
+                                "    \"start_date\": \"2020-06-15T00:00:00\",\n" +
+                                "    \"end_date\": \"2020-06-15T11:00:00\"\n" +
                                 "}"
                 ));
     }
@@ -110,12 +113,13 @@ class PriceControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(content().json(
-                        "{" +
-                                "\"product_id\": \"35455\"," +
-                                "\"brand_id\": 1," +
-                                "\"price_list\": \"4\"," +
-                                "\"start_date\": \"2020-06-15T16:00:00\"," +
-                                "\"end_date\": \"2020-12-31T23:59:59\"" +
+                        "{\n" +
+                                "    \"price\": \"38.95\",\n" +
+                                "    \"product_id\": 35455,\n" +
+                                "    \"brand_id\": 1,\n" +
+                                "    \"price_list\": 4,\n" +
+                                "    \"start_date\": \"2020-06-15T16:00:00\",\n" +
+                                "    \"end_date\": \"2020-12-31T23:59:59\"\n" +
                                 "}"
                 ));
     }

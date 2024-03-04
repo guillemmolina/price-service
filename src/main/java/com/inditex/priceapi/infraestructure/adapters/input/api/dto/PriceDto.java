@@ -9,17 +9,19 @@ import java.time.LocalDateTime;
 public class PriceDto {
 
     @JsonProperty("product_id")
-    private String productId;
+    private Integer productId;
 
     @JsonProperty("brand_id")
     private Integer brandId;
 
     @JsonProperty("price_list")
-    private String priceList;
+    private Integer priceList;
 
     @JsonProperty("start_date")
     private LocalDateTime startDate;
 
     @JsonProperty("end_date")
     private LocalDateTime endDate;
+
+    private String price;
 }
