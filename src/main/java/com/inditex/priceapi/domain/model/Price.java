@@ -13,6 +13,6 @@ public class Price {
     private Integer priceList;
     private Integer productId;
     private Integer priority;
-    private String price;
+    private String productPrice;
     private String curr;
 }

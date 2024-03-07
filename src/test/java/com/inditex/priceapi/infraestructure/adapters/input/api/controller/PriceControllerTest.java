@@ -20,7 +20,7 @@ class PriceControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void test1() throws Exception {
+    void test1() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/price")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("product_id", "35455")
@@ -41,7 +41,7 @@ class PriceControllerTest {
     }
 
     @Test
-    public void test2() throws Exception {
+    void test2() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/price")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("product_id", "35455")
@@ -62,7 +62,7 @@ class PriceControllerTest {
     }
 
     @Test
-    public void test3() throws Exception {
+    void test3() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/price")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("product_id", "35455")
@@ -83,7 +83,7 @@ class PriceControllerTest {
     }
 
     @Test
-    public void test4() throws Exception {
+    void test4() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/price")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("product_id", "35455")
@@ -104,7 +104,7 @@ class PriceControllerTest {
     }
 
     @Test
-    public void test5() throws Exception {
+    void test5() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/price")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("product_id", "35455")
@@ -126,7 +126,7 @@ class PriceControllerTest {
 
     // Este test comprobará que si la respuesta está vacía, devolverá un HttpStatus.No_Content
     @Test
-    public void test6_NO_CONTENT() throws Exception{
+    void test6NoContent() throws Exception{
         mockMvc.perform(MockMvcRequestBuilders.get("/price")
                         .contentType(MediaType.APPLICATION_JSON)
                         .param("product_id", "35455")

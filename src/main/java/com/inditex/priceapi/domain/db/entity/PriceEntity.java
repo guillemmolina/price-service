@@ -33,7 +33,7 @@ public class PriceEntity {
     private Integer priority;
 
     @Column(name = "price")
-    private String price;
+    private String productPrice;
 
     @Column(name = "curr")
     private String curr;

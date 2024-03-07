@@ -23,5 +23,6 @@ public class PriceDto {
     @JsonProperty("end_date")
     private LocalDateTime endDate;
 
-    private String price;
+    @JsonProperty("price")
+    private String productPrice;
 }

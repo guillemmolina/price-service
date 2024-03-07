@@ -22,7 +22,7 @@ public class PriceService implements PricePortInput {
         PriceEntity result = repository.findPrice(brandId, productId, applicationDate);
 
         if(result != null){
-            return Optional.of(priceMapper.priceToMODEL(result));
+            return Optional.of(priceMapper.priceToModel(result));
         }
         return Optional.empty();
     }

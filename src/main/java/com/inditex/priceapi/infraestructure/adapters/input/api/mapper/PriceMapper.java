@@ -11,7 +11,7 @@ import org.mapstruct.*;
         injectionStrategy = InjectionStrategy.CONSTRUCTOR,
         componentModel = "spring")
 public interface PriceMapper {
-    Price priceToMODEL(PriceEntity priceEntity);
+    Price priceToModel(PriceEntity priceEntity);
 
-    PriceDto priceToDTO (Price price);
+    PriceDto priceToDto(Price price);
 }
