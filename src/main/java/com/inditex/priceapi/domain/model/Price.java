@@ -15,5 +15,6 @@ public class Price {
     private Integer priority;
     private String productPrice;
     private String curr;
+    private Integer priceCuc;
     private String brandName;
 }
