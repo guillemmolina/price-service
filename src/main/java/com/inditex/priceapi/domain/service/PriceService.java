@@ -21,6 +21,8 @@ public class PriceService implements PricePortInput {
     public Optional<Price> getAllPrices(LocalDateTime applicationDate, Integer productId, Integer brandId) {
         PriceEntity result = repository.findPrice(brandId, productId, applicationDate);
 
+        repository.findPrice(brandId, productId, applicationDate);
+
         if(result != null){
             return Optional.of(priceMapper.priceToModel(result));
         }
